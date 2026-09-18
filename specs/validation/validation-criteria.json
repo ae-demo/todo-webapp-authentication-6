@@ -1,0 +1,64 @@
+{
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "statement": "A user can sign in securely so their to-do list is private to them",
+      "stories": [1],
+      "criteria": [
+        { "id": "AC-001-a", "must": "A signed-out user is directed to sign in before seeing any to-do items", "method": "e2e" },
+        { "id": "AC-001-b", "must": "After signing in, the user sees only their own to-do items, never another user's", "method": "e2e" }
+      ]
+    },
+    {
+      "id": "REQ-002",
+      "statement": "A user can add a new to-do item",
+      "stories": [2],
+      "criteria": [
+        { "id": "AC-002-a", "must": "A signed-in user can create a new to-do item by providing a title", "method": "e2e" },
+        { "id": "AC-002-b", "must": "A newly created to-do item appears in the user's list", "method": "e2e" }
+      ]
+    },
+    {
+      "id": "REQ-003",
+      "statement": "A user can view their list of to-do items",
+      "stories": [3],
+      "criteria": [
+        { "id": "AC-003-a", "must": "A signed-in user can view a list of all their to-do items", "method": "e2e" }
+      ]
+    },
+    {
+      "id": "REQ-004",
+      "statement": "A user can mark a to-do item complete and reopen it",
+      "stories": [4],
+      "criteria": [
+        { "id": "AC-004-a", "must": "A user can mark an open to-do item as complete", "method": "e2e" },
+        { "id": "AC-004-b", "must": "A user can reopen a completed to-do item", "method": "e2e" }
+      ]
+    },
+    {
+      "id": "REQ-005",
+      "statement": "A user can edit a to-do item's title",
+      "stories": [5],
+      "criteria": [
+        { "id": "AC-005-a", "must": "A user can change the title of an existing to-do item and the change is saved", "method": "e2e" }
+      ]
+    },
+    {
+      "id": "REQ-006",
+      "statement": "A user can delete a to-do item",
+      "stories": [6],
+      "criteria": [
+        { "id": "AC-006-a", "must": "A user can delete a to-do item and it no longer appears in their list", "method": "e2e" }
+      ]
+    },
+    {
+      "id": "REQ-007",
+      "statement": "A user's to-do items persist in a database and remain available whenever they sign back in, from any device",
+      "stories": [7],
+      "criteria": [
+        { "id": "AC-007-a", "must": "A to-do item created in one session is still present after the user signs out and signs back in", "method": "e2e" },
+        { "id": "AC-007-b", "must": "A user's to-do items are available when they sign in from a different browser session", "method": "e2e" }
+      ]
+    }
+  ]
+}

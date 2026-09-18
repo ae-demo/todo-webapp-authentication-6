@@ -1,0 +1,17 @@
+{
+  "name": "todo-webapp",
+  "type": "web-application",
+  "version": "0.1.0",
+  "language": "TypeScript",
+  "buildpack": "docker",
+  "appPath": "todo-webapp",
+  "entrypoint": "deployment/web-application",
+  "exposure": "internet",
+  "dependencies": [
+    { "kind": "component", "name": "todo-api", "description": "Calls the to-do API to create, list, update and delete the signed-in user's items." },
+    { "kind": "platform-resource", "name": "user-auth", "resourceType": "thunder-app" }
+  ],
+  "description": "The single-page to-do application: sign-in via Thunder, then add, view, edit, complete/reopen, and delete the signed-in user's own to-do items by calling todo-api. Does not store any data itself and does not offer any admin or shared view.",
+  "stories": [1, 2, 3, 4, 5, 6, 7],
+  "skillsPinned": ["wireframes", "react-webapp", "oxygen-ui-design-system", "thunder-authentication"]
+}
